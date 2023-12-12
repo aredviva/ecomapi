@@ -1,0 +1,34 @@
+@host = http://localhost:5114/api
+@token = eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjRhNmY0ZTJiNDM4MjQyZDU4ZTdlNmEyOGY3OTExMTBlIiwiZW1haWwiOiJiQGIuY29tIiwidXNlcklkIjoiMiIsIm5iZiI6MTcwMjM4NTM0OCwiZXhwIjoxNzAyNDAzMzQ4LCJpYXQiOjE3MDIzODUzNDgsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0IiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3QifQ.zr-2e6rTGYwqUlqavz5UCC8ynjXKNu8D17vEdnJrtzQviJdpAGOHPTWi6FrowpQVKTmMaRGS8N3f49rG967Nqg
+
+//Get Products
+POST {{host}}/products/getproducts
+Accept: */*
+Authorization: Bearer {{token}}
+
+{
+
+  "Email": "b@b.com",
+  "Password": "1234"
+}
+
+###
+
+//Add Basket
+POST {{host}}/basket/adduserbasket/1/10
+Accept: */*
+Authorization: Bearer {{token}}
+
+
+###
+
+//Get Basket
+POST {{host}}/basket/getuserbasket
+Accept: */*
+Authorization: Bearer {{token}}
+
+
+//Remove Basket
+POST {{host}}/basket/2/9
+Accept: */*
+Authorization: Bearer {{token}}
